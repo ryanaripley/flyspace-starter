@@ -2,7 +2,7 @@
 
 # Flyspace
 
-Flyspace is a custom WordPress theme built by [Fourteen Square, LLC] based on the [Underscores][underscores] starter theme.
+Flyspace is a custom WordPress theme built by [Fourteen Square, LLC][14S] based on the [Underscores][underscores] starter theme.
 
 ## Getting Started
 
