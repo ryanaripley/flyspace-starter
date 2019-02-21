@@ -1,0 +1,23 @@
+{
+  "name": "rumriver",
+  "version": "1.0.0",
+  "scripts": {
+    "scss": "sass sass/style.scss style.css",
+    "autoprefixer": "postcss -u autoprefixer -r style.css",
+    "reload": "livereload . -w 500 -d",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:all": "npm run build:css",
+    "watch:css": "onchange 'sass/**/*.scss' -- npm run build:css",
+    "watch:all": "parallelshell 'npm run reload' 'npm run watch:css'",
+    "package": "npm run build:all && zip 'rumriver' screenshot.png style.css js/* img/* *.php **/*.php **/**/*.php languages/*"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.6.3",
+    "browser-sync": "^2.24.4",
+    "livereload": "^0.7.0",
+    "onchange": "^4.0.0",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^5.0.1",
+    "sass": "^1.6.1"
+  }
+}
