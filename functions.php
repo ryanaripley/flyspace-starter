@@ -120,6 +120,8 @@ add_action( 'widgets_init', 'flyspace_widgets_init' );
  * Enqueue scripts and styles.
  */
 function flyspace_scripts() {
+	wp_enqueue_style( 'flyspace-google-fonts', 'https://fonts.googleapis.com/css?family=Josefin+Sans:700|Open+Sans:400,400i,70', false);
+
 	wp_enqueue_style( 'flyspace-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'flyspace-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
