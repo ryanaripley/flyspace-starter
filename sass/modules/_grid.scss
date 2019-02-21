@@ -1,0 +1,99 @@
+.grid-container {
+	@include clearfix;
+}
+
+ul.grid-container {
+	margin: 0;
+	padding: 0;
+}
+
+.grid-item {
+	box-sizing: border-box;
+  display: block;
+  margin-right: 3%;
+	width: 100%;
+}
+
+.grid-image {
+
+}
+
+.grid-info {
+	h3 {
+		margin-bottom: 0;
+	}
+	h3 a {
+		text-decoration: none;
+	}
+	.entry-meta {
+		font-size: .9em;
+		font-style: italic;
+	}
+	p {
+		font-size: .9em;
+	}
+
+}
+
+@media (min-width: $bp__medium) and (max-width: $bp__large - 1) {
+
+	.grid-item {
+    float: left;
+    width: 48.5%;   
+		&:nth-of-type(2n + 1) {
+			clear: both;
+		}
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+	}
+
+	.grid-4 .grid-item {
+		width: 22.75%;
+		&:nth-of-type(4n + 1) {
+			clear: both;
+		}
+		&:nth-of-type(4n) {
+			margin-right: 0;
+		}
+	}
+
+}
+
+@media (min-width: $bp__large) {
+
+  .grid-2 .grid-item {
+    float: left;
+    width: 48.5%;
+		&:nth-of-type(2n + 1) {
+			clear: both;
+		}
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+  }
+  
+  .grid-3 .grid-item {
+    float: left;
+		width: 31.33333%;
+    &:nth-of-type(3n + 1) {
+			clear: both;
+		}
+		&:nth-of-type(3n) {
+			margin-right: 0;
+		}
+  }
+
+	.grid-4 .grid-item {
+		width: 22.75%;
+		&:nth-of-type(4n + 1) {
+			clear: both;
+		}
+		&::nth-of-type(4n) {
+			margin-right: 0;
+		}
+	}
+
+}
+
+

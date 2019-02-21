@@ -146,3 +146,34 @@ if ( ! function_exists( 'flyspace_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'flyspace_hero_image' ) ) :
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function flyspace_hero_image() {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
+
+			?>
+
+			<header class="site-hero entry-header" data-hero-large="<?php the_post_thumbnail_url( 'hero_large' ) ?>" data-hero-small="<?php the_post_thumbnail_url( 'hero_small' ); ?>">
+				<div class="hero-mask">
+					<div class="hero-text">
+						<?php if ( is_front_page() ) :
+							echo '<h1 class="hero-headline">' . get_bloginfo( 'description', 'display' ) . '</h1>';
+						else :
+							the_title( '<h1 class="hero-headline">', '</h1>' ); 
+						endif; ?>
+					</div>
+				</div>
+			</header><!-- .site-hero -->
+
+
+		<?php
+	}
+endif;
