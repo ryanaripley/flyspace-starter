@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, button, menuToggleInside, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -19,6 +19,8 @@
 
 	menu = container.getElementsByTagName( 'ul' )[0];
 
+	menuToggleInside = container.getElementsByClassName('menu-toggle-inside')[0];
+
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
 		button.style.display = 'none';
@@ -30,7 +32,7 @@
 		menu.className += ' nav-menu';
 	}
 
-	button.onclick = function() {
+	function toggleDrawer() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
@@ -41,6 +43,9 @@
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
+
+	button.addEventListener('click', toggleDrawer );
+	menuToggleInside.addEventListener('click', toggleDrawer );
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );

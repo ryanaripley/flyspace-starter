@@ -1,0 +1,39 @@
+.site-header {
+  padding: 1em;
+  display: flex;
+
+  .custom-logo {
+    max-width: 200px;
+  }
+
+  .site-branding {
+    margin-right: auto;
+  }
+
+  .main-navigation {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  @media screen and (min-width: $bp__small) {
+    .custom-logo {
+      max-width: 250px;
+    }
+  }
+
+  @media screen and (min-width: $bp__medium) {
+    .custom-logo {
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (min-width: $bp__large) {
+    .custom-logo {
+      max-width: 350px;
+    }
+  }
+
+
+}

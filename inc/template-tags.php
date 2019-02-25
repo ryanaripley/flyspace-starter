@@ -177,3 +177,27 @@ if ( ! function_exists( 'flyspace_hero_image' ) ) :
 		<?php
 	}
 endif;
+
+if ( ! function_exists( 'flyspace_icon_x' ) ) :
+
+	function flyspace_icon_x() { ?>
+
+		<svg class="icon-x" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+			<path d="M1.41 0l-1.41 1.41.72.72 1.78 1.81-1.78 1.78-.72.69 1.41 1.44.72-.72 1.81-1.81 1.78 1.81.69.72 1.44-1.44-.72-.69-1.81-1.78 1.81-1.81.72-.72-1.44-1.41-.69.72-1.78 1.78-1.81-1.78-.72-.72z" /> 
+		</svg>
+
+	<?php }
+
+endif;
+
+if ( ! function_exists( 'flyspace_icon_menu' ) ) :
+
+	function flyspace_icon_menu() { ?>
+
+		<svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+			<path d="M4 12h56v12h-56zM4 28h56v12h-56zM4 44h56v12h-56z" fill="#ffffff"></path>
+		</svg>
+
+	<?php }
+
+endif;
