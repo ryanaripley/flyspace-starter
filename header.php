@@ -23,6 +23,44 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'flyspace' ); ?></a>
+	
+	<?php 
+	$facebook_url = get_option('facebook_url');
+	$twitter_url = get_option('twitter_url');
+	$linkedin_url = get_option('linkedin_url');
+	$company_phone = get_option('company_phone');
+
+	if ( $facebook_url || $twitter_url || $linkedin_url || $company_phone ) : ?>
+		<div class="social-links">
+
+			<?php if ( $facebook_url ) { ?>
+				<a href="<?php echo $facebook_url; ?>">
+					<?php flyspace_icon_facebook(); 
+					esc_html_e('Facebook', 'flyspace') ?>
+				</a>
+			<?php } ?>
+			<?php if ( $twitter_url ) { ?>
+				<a href="<?php echo $twitter_url; ?>">
+					<?php flyspace_icon_twitter(); 
+					esc_html_e('Twitter', 'flyspace') ?>
+				</a>
+			<?php } ?>
+			<?php if ( $linkedin_url ) { ?>
+				<a href="<?php echo $linkedin_url; ?>">
+					<?php flyspace_icon_linkedin(); 
+					esc_html_e('LinkedIn', 'flyspace') ?>
+				</a>
+			<?php } ?>
+			<?php if ( $company_phone ) { ?>
+				<a href="tel:+1<?php echo $company_phone; ?>">
+					<?php flyspace_icon_phone(); 
+					echo $company_phone; ?>
+				</a>
+			<?php } ?>
+
+		</div>
+
+	<?php endif; ?>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">

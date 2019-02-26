@@ -55,8 +55,10 @@ body.admin-bar .main-navigation .main-nav-drawer {
 	color: white;
 	cursor: pointer;
 	display: block;
-	path {
-		fill: white;
+	svg {
+		height: 1em;
+		stroke: white;
+		width: 1em;
 	}
 }
 

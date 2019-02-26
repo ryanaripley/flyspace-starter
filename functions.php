@@ -137,6 +137,11 @@ function flyspace_scripts() {
 add_action( 'wp_enqueue_scripts', 'flyspace_scripts' );
 
 /**
+ * Implement theme settings page
+ */
+require get_template_directory() . '/inc/theme-settings.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

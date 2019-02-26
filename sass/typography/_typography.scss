@@ -13,3 +13,11 @@ textarea {
 @import "headings";
 
 @import "copy";
+
+svg[class^="flyspace-icon-"] {
+	height: 1.1em;
+	margin-right: .2em;
+	stroke: $color__black;
+	transform: translateY(.05em);
+	width: 1.1em;
+}

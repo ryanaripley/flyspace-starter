@@ -1,0 +1,59 @@
+<?php
+/**
+ * Custom settings for the Flyspace theme
+ *
+ * @package Flyspace
+ */
+
+function flyspace_theme_settings_page() { ?>
+  <div class="wrap">
+    <h1>Theme Panel</h1>
+    <form method="post" action="options.php">
+      <?php
+      settings_fields("section");
+      do_settings_sections("theme-options");      
+      submit_button(); 
+      ?>          
+    </form>
+  </div>
+
+<?php }
+
+function flyspace_add_theme_menu_item()
+{
+  add_menu_page("Theme Panel", "Theme Panel", "manage_options", "theme-panel", "flyspace_theme_settings_page", 'dashicons-thumbs-up
+  ', 99);
+}
+add_action("admin_menu", "flyspace_add_theme_menu_item");
+
+function flyspace_display_twitter_element() { ?>
+  <input type="text" name="twitter_url" id="twitter_url" value="<?php echo get_option('twitter_url'); ?>" />
+<?php }
+
+function flyspace_display_facebook_element() { ?>
+  <input type="text" name="facebook_url" id="facebook_url" value="<?php echo get_option('facebook_url'); ?>" />
+<?php }
+
+function flyspace_display_linkedin_element() { ?>
+  <input type="text" name="linkedin_url" id="linkedin_url" value="<?php echo get_option('linkedin_url'); ?>" />
+<?php }
+
+function flyspace_display_phone_element() { ?>
+  <input type="text" name="company_phone" id="company_phone" value="<?php echo get_option('company_phone'); ?>" />
+<?php }
+
+function flyspace_display_theme_panel_fields() { 
+	add_settings_section("section", "All Settings", null, "theme-options");
+	
+	add_settings_field("twitter_url", "Twitter Profile Url", "flyspace_display_twitter_element", "theme-options", "section");
+  add_settings_field("facebook_url", "Facebook Profile Url", "flyspace_display_facebook_element", "theme-options", "section");
+  add_settings_field("linkedin_url", "LinkedIn Profile Url", "flyspace_display_linkedin_element", "theme-options", "section");
+  add_settings_field("company_phone", "Company Phone Number", "flyspace_display_phone_element", "theme-options", "section");
+
+  register_setting("section", "twitter_url");
+  register_setting("section", "facebook_url");
+  register_setting("section", "linkedin_url");
+  register_setting("section", "company_phone");
+}
+
+add_action("admin_init", "flyspace_display_theme_panel_fields");
