@@ -1,22 +1,32 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
-
-	&:hover {
-		border-color: $color__border-button-hover;
+input[type="submit"],
+a.button {
+	border: 1px solid $color__primary;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	background: $color__primary;
+	font-size: 1rem;
+	line-height: 1rem;
+	margin: 0;
+	padding: .5rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	transition: background .1s ease-in-out, 
+							border-color .1s ease-in-out;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	&:hover, &:focus {
+		background: darken($color__primary, 10);
+		border-color: darken($color__primary, 10);
 	}
-
-	&:active,
 	&:focus {
-		border-color: $color__border-button-focus;
+		outline: 1px solid #fff;
+		outline-offset: -4px;
+	}
+	&:active {
+		transform: scale(0.99);
 	}
 }

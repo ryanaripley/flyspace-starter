@@ -1,0 +1,62 @@
+.flyspace-highlights {
+  color: white;
+  margin: 0 auto;
+  max-width: $width__large;
+  padding: 2rem;
+
+  .wp-block-column {
+    background: $color__secondary;
+    padding: 1rem;
+  }
+
+  .wp-block-column:nth-child(3n-1) {
+    background: $color__primary;
+    h2, h3, h4, h5, h6 {
+      &:after {
+        transform: rotate(90deg)
+      }
+    }
+  }
+
+  .wp-block-column:nth-child(3n) {
+    background: $color__secondary-lt;
+    h2, h3, h4, h5, h6 {
+      &:after {
+        transform: rotate(180deg)
+      }
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    text-align: center;
+    &:after {
+      content: url('img/mark.png');
+      height: 30px;
+      width: 30px;
+      display: block;
+      margin: 20px auto;
+    }
+  }
+
+
+}
+
+.wp-block-batten-blocks-batten-bio {
+  background: $color__primary;
+
+  .bio-image img {
+    transition: all .8s ease-in-out;
+  }
+
+  &.off-screen .bio-image img {
+    filter: blur(4px);
+    transform: scale(1.1);
+  }
+
+  .bio-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+}

@@ -83,7 +83,9 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'flyspace' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<?php flyspace_icon_menu(); esc_html_e( 'Menu', 'flyspace' ); ?>
+			</button>
 			<div class="main-nav-drawer">
 				<div class="menu-toggle-inside">
 					<?php flyspace_icon_x(); 
