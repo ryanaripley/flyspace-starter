@@ -5,8 +5,13 @@
   padding: 2rem;
 
   .wp-block-column {
+    //transform: scale(.95);
     background: $color__secondary;
     padding: 1rem;
+    //transition: transform .2s ease-in-out;
+    &:hover {
+      //transform: scale(1);
+    }
   }
 
   .wp-block-column:nth-child(3n-1) {
@@ -59,4 +64,22 @@
     margin-bottom: 2rem;
   }
 
+}
+
+.flyspace-cta-buttons {
+  padding: 2rem;
+  .button {
+    font-size: 1.5em;
+    padding: 1em 2em;
+    margin: .5em;
+  }
+  .button.scroll-animate {
+    transition: transform .5s ease-in-out;
+  }
+  .button.on-screen {
+    animation-delay: .6s;
+    animation-duration: .5s;
+    animation-name: wiggle;
+    animation-timing-function: ease-in-out;
+  }
 }

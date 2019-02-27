@@ -28,6 +28,7 @@ function removeOffScreenClass() {
     var scrollPosition = (window.pageYOffset || document.documentElement.scrollTop) + window.innerHeight;
     if (scrollPosition - 80 > slideElement.offsetTop) {
       slideElement.classList.remove('off-screen');
+      slideElement.classList.add('on-screen');
       console.log('now!');
     }
   });
@@ -36,7 +37,7 @@ function removeOffScreenClass() {
 function handleScroll() {
   // change CSS scroll amount variable
   document.body.style.setProperty("--scroll-amount", (document.body.scrollTop || document.documentElement.scrollTop));
-  // handle sliding elements
+  // handle elements that animate on scroll
   removeOffScreenClass();
 };
 

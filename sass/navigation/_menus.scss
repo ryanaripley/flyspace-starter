@@ -22,6 +22,9 @@ $bp__nav: 850px;
 	}
 	
 	@media screen and (max-width: $bp__nav) {
+		#primary-menu {
+			width: 100%;
+		}
 		.main-nav-drawer {
 			@include clearfix;
 			background: $color__black;
@@ -29,7 +32,6 @@ $bp__nav: 850px;
 			height: 100%;
 			right: -20em;
 			overflow: auto;
-			padding: 1em;
 			position: fixed;
 			transition: right .25s ease-in-out;
 			width: 18em;
@@ -37,7 +39,12 @@ $bp__nav: 850px;
 		}
 
 		a {
+			border-bottom: 1px solid rgb(59, 59, 59);
 			color: white;
+			display: block;
+			font-size: 1.1em;
+			padding: 1em 2em;
+			width: 100%;
 		}
 	}
 
@@ -50,11 +57,18 @@ body.admin-bar .main-navigation .main-nav-drawer {
 /* Small menu. */
 .menu-toggle {
 	display: block;
+	svg {
+		stroke: white;
+	}
 }
 .menu-toggle-inside {
+	border-bottom: 1px solid rgb(59, 59, 59);
 	color: white;
 	cursor: pointer;
+	color: white;
 	display: block;
+	padding: 1em 2em;
+	width: 100%;
 	svg {
 		height: 1em;
 		stroke: white;
@@ -73,11 +87,12 @@ body.admin-bar .main-navigation .main-nav-drawer {
 	}
 
 	.main-navigation {
-		#primary-menu > ul > li {
+		#primary-menu > li {
 			display: inline;
 		}
 		a {
 			display: inline-block;
+			font-size: 1.2rem;
 			padding: .4em .8em;
 		}
 	}

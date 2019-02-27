@@ -1,17 +1,19 @@
+$button__color: $color__secondary;
+
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 a.button {
-	border: 1px solid $color__primary;
+	border: 1px solid $button__color;
 	color: #ffffff;
 	cursor: pointer;
 	display: inline-block;
-	background: $color__primary;
+	background: $button__color;
 	font-size: 1rem;
 	line-height: 1rem;
 	margin: 0;
-	padding: .5rem 1rem;
+	padding: .5em 1em;
 	text-align: center;
 	text-decoration: none;
 	transition: background .1s ease-in-out, 
@@ -19,8 +21,8 @@ a.button {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	&:hover, &:focus {
-		background: darken($color__primary, 10);
-		border-color: darken($color__primary, 10);
+		background: darken($button__color, 10);
+		border-color: darken($button__color, 10);
 	}
 	&:focus {
 		outline: 1px solid #fff;
@@ -29,4 +31,9 @@ a.button {
 	&:active {
 		transform: scale(0.99);
 	}
+}
+
+a.button:visited,
+a.button:hover {
+	color: white;
 }
