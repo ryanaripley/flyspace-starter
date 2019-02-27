@@ -45,6 +45,7 @@ if ( ! function_exists( 'flyspace_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'flyspace' ),
+			'footer-nav-menu' => esc_html__( 'Footer nav menu', 'flyspace' ),
 		) );
 
 		/*
@@ -113,6 +114,33 @@ function flyspace_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer left', 'flyspace' ),
+		'id'            => 'footer-left',
+		'description'   => esc_html__( 'Add widgets here.', 'flyspace' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer center', 'flyspace' ),
+		'id'            => 'footer-center',
+		'description'   => esc_html__( 'Add widgets here.', 'flyspace' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer right', 'flyspace' ),
+		'id'            => 'footer-right',
+		'description'   => esc_html__( 'Add widgets here.', 'flyspace' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
 }
 add_action( 'widgets_init', 'flyspace_widgets_init' );
 

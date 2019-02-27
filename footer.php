@@ -14,12 +14,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<div class="site-copyright">
-				&copy;<?php echo date("Y") . ' '; ?>
-				<?php bloginfo( 'name' ); ?>
-			</div><!-- .site-copyright -->
-		</div><!-- .site-info -->
+		<div class="footer-widget-area">
+			<div class="footer-widget"><?php dynamic_sidebar( 'footer-left'); ?></div>
+			<div class="footer-widget"><?php dynamic_sidebar( 'footer-center'); ?></div>
+			<div class="footer-widget"><?php dynamic_sidebar( 'footer-right'); ?></div>
+		</div>
+		<div class="copyright-info">
+			&copy;<?php echo date("Y") . ' '; ?>
+			<?php bloginfo( 'name' ); ?>
+		</div><!-- .site-copyright -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

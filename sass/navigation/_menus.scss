@@ -35,7 +35,7 @@ $bp__nav: 850px;
 			position: fixed;
 			transition: right .25s ease-in-out;
 			width: 18em;
-			z-index: 10000;
+			z-index: 999999; /* Put it above the WP admin menu */
 		}
 
 		a {
@@ -51,14 +51,19 @@ $bp__nav: 850px;
 }
 
 body.admin-bar .main-navigation .main-nav-drawer {
-	top: 46px;
+	//top: 46px;
 }
 
 /* Small menu. */
 .menu-toggle {
 	display: block;
+	vertical-align: center;
+	font-size: 1.1rem;
 	svg {
+		height: 1rem;
+		margin-right: 0;
 		stroke: white;
+		width: 1rem;
 	}
 }
 .menu-toggle-inside {
@@ -67,6 +72,7 @@ body.admin-bar .main-navigation .main-nav-drawer {
 	cursor: pointer;
 	color: white;
 	display: block;
+	font-size: 1.1rem;
 	padding: 1em 2em;
 	width: 100%;
 	svg {

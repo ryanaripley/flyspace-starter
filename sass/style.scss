@@ -95,9 +95,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Modules
 --------------------------------------------------------------*/
 @import "modules/grid";
-@import "modules/header";
 @import "modules/hero-header";
 @import "modules/blocks";
+
+/*--------------------------------------------------------------
+# Layout 
+--------------------------------------------------------------*/
+@import "layout/header";
+@import "layout/footer";
 
 /*--------------------------------------------------------------
 # Content
