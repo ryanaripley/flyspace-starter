@@ -4,6 +4,10 @@
   color: white;
   padding: 2rem;
 
+  @media screen and (min-width: $bp__medium) {
+    padding: 3rem 2rem 2rem;
+  }
+
   .footer-logo {
     width: 250px;
     @media screen and (max-width: $bp__small - 1) {
