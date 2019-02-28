@@ -43,8 +43,6 @@
       margin: 20px auto;
     }
   }
-
-
 }
 
 .wp-block-batten-blocks-batten-bio {
@@ -70,12 +68,37 @@
   background-attachment: fixed;
 }
 
+.flyspace-cta-block {
+  background: $color__secondary-lt;
+  color: white;
+  padding: 2rem;
+  margin-top: 3rem;
+  p {
+    font-size: 1.4rem;
+    max-width: $width__medium;
+    margin: 1.4rem auto;
+    width: 90%;
+  }
+  .button {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+  }
+  .button.scroll-animate {
+    transition: transform .5s ease-in-out;
+  }
+  .button.on-screen {
+    animation-delay: .6s;
+    animation-duration: .5s;
+    animation-name: wiggle;
+    animation-timing-function: ease-in-out;
+  }
+}
 
 .flyspace-cta-buttons {
   padding: 2rem;
   .button {
-    font-size: 1.3em;
-    padding: 1em 2em;
+    font-size: 1.3rem;
+    padding: 1rem 1rem;
     margin: .5em;
   }
   .button.scroll-animate {
@@ -87,4 +110,50 @@
     animation-name: wiggle;
     animation-timing-function: ease-in-out;
   }
+}
+
+/* Deal with regular blocks */
+
+.entry-content > p {
+  font-size: 1.2rem;
+  max-width: $width__medium;
+  margin: 1.4rem auto;
+  width: 90%;
+}
+
+.entry-content > ul,
+.entry-content > ol {
+  font-size: 1.2rem;
+  max-width: $width__medium;
+  margin: 1.4rem auto 2.4rem;;
+  width: 90%;
+}
+
+.entry-content > p:first-child {
+  font-size: 1.4rem;
+  margin-top: 3rem;
+}
+
+.entry-content > h2,
+.entry-content > h3,
+.entry-content > h4,
+.entry-content > h5,
+.entry-content > h6 {
+  color: $color__secondary;
+  max-width: $width__medium;
+  margin: 2.4rem auto 1rem;
+  width: 90%;
+}
+
+.entry-content > blockquote,
+.entry-content > figure {
+  max-width: $width__medium;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.entry-content > .wpcf7 {
+  max-width: 600px;
+  margin: 3rem auto;
+  width: 90%;
 }

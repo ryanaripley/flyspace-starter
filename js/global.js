@@ -46,9 +46,10 @@ removeOffScreenClass();
 
 
 var heroImage = document.querySelector('.site-hero');
-if ( window.innerWidth > 800 ) {
-    heroImage.style.backgroundImage = `url('${heroImage.dataset.heroLarge}')`;
-} else {
-    heroImage.style.backgroundImage = `url('${heroImage.dataset.heroSmall}')`;
+if ( heroImage ) {
+  if ( window.innerWidth > 800 ) {
+      heroImage.style.backgroundImage = `url('${heroImage.dataset.heroLarge}')`;
+  } else {
+      heroImage.style.backgroundImage = `url('${heroImage.dataset.heroSmall}')`;
+  }
 }
-

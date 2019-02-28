@@ -165,7 +165,7 @@ if ( ! function_exists( 'flyspace_hero_image' ) ) :
 				<div class="hero-mask">
 					<div class="hero-text">
 						<?php if ( is_front_page() ) :
-							echo '<h1 class="hero-headline">' . get_bloginfo( 'description', 'display' ) . '</h1>';
+							echo '<h1 class="hero-headline blog-description">' . get_bloginfo( 'description', 'display' ) . '</h1>';
 						else :
 							the_title( '<h1 class="hero-headline">', '</h1>' ); 
 						endif; ?>
