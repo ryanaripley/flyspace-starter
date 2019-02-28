@@ -9,7 +9,7 @@
     "build:all": "npm run build:css",
     "watch:css": "onchange 'sass/**/*.scss' -- npm run build:css",
     "watch:all": "parallelshell 'npm run reload' 'npm run watch:css'",
-    "package": "npm run build:all && zip 'rumriver' screenshot.png style.css js/* img/* *.php **/*.php **/**/*.php languages/*"
+    "package": "npm run build:all && zip 'flyspace' screenshot.png style.css js/* img/* svg/* *.php **/*.php **/**/*.php languages/*"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.3",
