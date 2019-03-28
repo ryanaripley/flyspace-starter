@@ -62,10 +62,43 @@
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
+
+  a, a:visited {
+    color: white;
+  }
+
+  a:hover, a:focus {
+    color: rgba(white, .7);
+  }
 }
 
 .wp-block-batten-blocks-batten-quotation {
   background-attachment: fixed;
+}
+
+.flyspace-feature-block {
+  background: $color__primary;
+  color: white;
+  padding: 2rem;
+  p {
+    font-size: 1.4rem;
+    max-width: $width__medium;
+    margin: 1.4rem auto;
+    width: 90%;
+  }
+  .button {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+  }
+  .button.scroll-animate {
+    transition: transform .5s ease-in-out;
+  }
+  .button.on-screen {
+    animation-delay: .6s;
+    animation-duration: .5s;
+    animation-name: wiggle;
+    animation-timing-function: ease-in-out;
+  }
 }
 
 .flyspace-cta-block {

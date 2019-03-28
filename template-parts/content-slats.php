@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying grid
+ * Template part for displaying slats
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,7 +9,7 @@
 
 ?>
 
-<li class="grid-item">
+<div class="grid-item">
 
   <div class="grid-image">
     <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
@@ -53,4 +53,4 @@
   
   </div>
 
-</li><!-- .grid-item; -->
+</div><!-- .slat-item; -->

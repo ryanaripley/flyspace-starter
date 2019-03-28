@@ -10,9 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php flyspace_hero_image(); ?>
-	</header><!-- .entry-header -->
+	<?php flyspace_hero_image(); ?>
 
 	<?php //flyspace_post_thumbnail(); ?>
 

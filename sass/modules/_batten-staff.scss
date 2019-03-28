@@ -1,0 +1,13 @@
+.batten-staff-wrapper {
+  &:nth-child(2n) {
+    background: $color__secondary;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+}
+
+.staff-page-content {
+  
+}

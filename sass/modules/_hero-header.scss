@@ -40,6 +40,11 @@
   }
 }
 
+.hero-subheading {
+  color: white;
+  font-size: 1.4em;
+}
+
 .hero-headline.blog-description {
   font-size: 1.6rem;
 }
@@ -68,6 +73,10 @@
     font-size: 2.5rem;
   }
 
+  .hero-subheading {
+    font-size: 1.8em;
+  }
+
 }
 
 @media ( min-width: $bp__large ) {
@@ -80,6 +89,11 @@
   }
   .hero-headline.blog-description {
     font-size: 3rem;
+  }
+
+  .hero-subheading {
+    color: white;
+    font-size: 2.2em;
   }
 
 }
