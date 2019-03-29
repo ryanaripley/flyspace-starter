@@ -37,14 +37,15 @@ get_header();
       ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="site-hero entry-header" data-hero-large="<?php echo $bg_large ?>" data-hero-small="<?php echo $bg_small; ?>">
+        <header class="site-hero entry-header staff-page-header" data-hero-large="<?php echo $bg_large ?>" data-hero-small="<?php echo $bg_small; ?>">
 				<div class="hero-mask">
 					<div class="hero-text">
-						<?php if ( is_front_page() ) :
-							echo '<h1 class="hero-headline blog-description">' . get_bloginfo( 'description', 'display' ) . '</h1>';
-						else :
-							the_title( '<h1 class="hero-headline">', '</h1>' ); 
-						endif; ?>
+            <?php if ( $staff_photo ) { ?>
+              <figure class="staff-photo">
+                <img src="<?php echo $staff_photo['url']; ?>" alt="<?php echo $staff_photo['alt']; ?>">
+              </figure>
+            <?php }; ?>
+							<?php the_title( '<h1 class="hero-headline">', '</h1>' ); ?>
             <?php if ( $staff_title ) { ?>
               <div class="hero-subheading"><?php echo $staff_title; ?></div>
             <?php }; ?>
@@ -55,14 +56,44 @@ get_header();
         <?php //flyspace_post_thumbnail(); ?>
 
         <div class="entry-content staff-page-content">
-          <?php if ( $staff_photo ) { ?>
-            <figure class="staff-photo">
-              <img src="<?php echo $staff_photo['url']; ?>" alt="<?php echo $staff_photo['alt']; ?>">
-            </figure>
-          <?php }; ?>
+          
           <?php if ( $staff_bio ) { ?>
-            <div class="staff-bio"><?php echo $staff_bio; ?></div>
+            <div class="staff-bio">
+              <?php echo $staff_bio; ?>
+            </div>
           <?php }; ?>
+
+          <?php if ( $staff_phone || $staff_facebook || $staff_twitter || $staff_linkedin ): ?>
+            <div class="staff-contact-info">
+              <h2>
+                <?php echo __( 'Contact', 'flyspace' ); ?>
+                <?php echo get_the_title(); ?>
+              </h2>
+              <p>
+                <?php if ( $staff_phone ) { ?>
+                  <span class="staff-phone">
+                    <?php echo __( 'Phone: ', 'flyspace'); ?>
+                    <a href="tel:1-<?php echo $staff_phone; ?>"><?php echo $staff_phone; ?></a>
+                  </span><br>
+                <?php }; ?>
+                <?php if ( $staff_facebook ) { ?>
+                  <span class="staff-facebook">
+                    <a href="<?php echo $staff_facebook; ?>"><?php echo __( 'Connect on Facebook', 'flyspace'); ?></a>
+                  </span><br>
+                <?php }; ?>
+                <?php if ( $staff_twitter ) { ?>
+                  <span class="staff-twitter">
+                    <a href="<?php echo $staff_twitter; ?>"><?php echo __( 'Follow on Twitter', 'flyspace'); ?></a>
+                  </span><br>
+                <?php }; ?>
+                <?php if ( $staff_linkedin ) { ?>
+                  <span class="staff-linkedin">
+                    <a href="<?php echo $staff_linkedin; ?>"><?php echo __( 'Connect on LinkedIn', 'flyspace'); ?></a>
+                  </span><br>
+                <?php }; ?>
+              </p>
+            </div>
+          <?php endif; ?>
           
           <?php 
           wp_link_pages( array(
