@@ -93,6 +93,25 @@
     }
   }
 
+  .footer-contact-section {
+    margin-bottom: 1em;
+
+    .footer-social-media-icons {
+      margin-top: .5em;
+
+      svg[class^="flyspace-icon-"] {
+        height: 1.8em;
+        margin-right: .5em;
+        stroke: white;
+        width: 1.8em;
+        fill: white;
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
+
   .copyright-info {
     color: rgba(white, .5);
     text-align: center;
