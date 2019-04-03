@@ -165,6 +165,7 @@
 .entry-content > p:first-child {
   font-size: 1.4rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .entry-content > h2,
@@ -222,10 +223,5 @@
     content: "\2014";
   }
 
-  @media screen and (min-width: $bp__medium) {
-    p {
-      font-size: 1.4em;
-    }
-  }
 }
 
