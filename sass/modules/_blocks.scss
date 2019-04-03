@@ -190,3 +190,42 @@
   margin: 3rem auto;
   width: 90%;
 }
+
+.entry-content > .wp-block-quote {
+  max-width: 100%;
+  margin: 0;
+  width: 100%;
+  padding: 2rem 0;
+
+  &:nth-child(2n) {
+    background: $color__secondary;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+
+  p {
+    font-size: 1.2em;
+    margin: 0 auto 1.4rem;
+    max-width: $width__medium;
+    width: 90%;
+  }
+  cite {
+    display: block;
+    margin: 0 auto;
+    max-width: $width__medium;
+    width: 90%;
+  }
+  cite::before {
+    display: inline-block;
+    content: "\2014";
+  }
+
+  @media screen and (min-width: $bp__medium) {
+    p {
+      font-size: 1.4em;
+    }
+  }
+}
+
