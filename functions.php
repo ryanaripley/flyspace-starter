@@ -150,7 +150,7 @@ add_action( 'widgets_init', 'flyspace_widgets_init' );
 function flyspace_scripts() {
 	wp_enqueue_style( 'flyspace-google-fonts', 'https://fonts.googleapis.com/css?family=Josefin+Sans:700|Open+Sans:400,400i,70', false);
 
-	wp_enqueue_style( 'flyspace-style', get_stylesheet_uri(), array(), '2019040302' );
+	wp_enqueue_style( 'flyspace-style', get_stylesheet_uri(), array(), '20190410' );
 
 	wp_enqueue_script( 'flyspace-global', get_template_directory_uri() . '/js/global.js', array(), '20190221', true );
 

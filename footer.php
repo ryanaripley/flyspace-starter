@@ -65,9 +65,19 @@
 				<?php dynamic_sidebar( 'footer-right'); ?>
 			</div>
 		</div>
-		<div class="copyright-info">
+		<div class="copyright-and-terms">
 			&copy;<?php echo date("Y") . ' '; ?>
-			<?php bloginfo( 'name' ); ?>
+			<?php bloginfo( 'name' ); 
+			
+			$privacy_page = get_page_by_title( 'Privacy Policy' ); 
+			$terms_page = get_page_by_title( 'Terms of Service' ); 
+			if ( $privacy_page ) {
+				echo ' | ' . '<a href="' . get_permalink( $privacy_page ) . '">' . __( 'Privacy Policy', "flyspace" ) . '</a>';
+			} 
+			if ( $terms_page ) {
+				echo ' | ' . '<a href="' . get_permalink( $terms_page ) . '">' . __( 'Terms of Service', "flyspace" ) . '</a>';
+			}
+			?>
 		</div><!-- .site-copyright -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
