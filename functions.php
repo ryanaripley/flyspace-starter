@@ -201,3 +201,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function flyspace_login_logo() { ?>
+	<style type="text/css">
+			#login h1 a, .login h1 a {
+				background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo_color.png);
+				height:107px;
+				width:320px;
+				background-size: 320px 107px;
+				background-repeat: no-repeat;
+				padding-bottom: 30px;
+			}
+	</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'flyspace_login_logo' );
+
+function flyspace_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'flyspace_login_logo_url' );
+
+function flyspace_login_logo_url_title() {
+	return get_bloginfo( 'name' );
+}
+add_filter( 'login_headertitle', 'flyspace_login_logo_url_title' );
